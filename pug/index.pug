@@ -1,0 +1,174 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		title Document
+		//
+			<link rel="stylesheet" href="css/header.min.css">
+			<link rel="stylesheet" href="css/main.min.css">
+		link(rel='stylesheet', href='css/test.min.css')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+		link(rel='shortcut icon', href='img/favicon/favicon.ico', type='image/x-icon')
+		link(rel='apple-touch-icon', href='img/favicon/apple-touch-icon.png')
+		link(rel='apple-touch-icon', sizes='72x72', href='img/favicon/apple-touch-icon-72x72.png')
+		link(rel='apple-touch-icon', sizes='114x114', href='img/favicon/apple-touch-icon-114x114.png')
+	body
+		.menubutton
+			.menubutton__inner
+		.wrapper
+			header
+				a(href='/')
+					img.logo(src='img/logo.png', alt='')
+				ul.menu
+					li.menu__item
+						a.menu__link(href='#') Главная
+					li.menu__item
+						a.menu__link(href='#') Направления
+					li.menu__item
+						a.menu__link(href='#') Оборудование
+					li.menu__item
+						a.menu__link(href='#') Новости
+					li.menu__item
+						a.menu__link(href='#') Контакты
+				.contacts
+					.contacts__phone +7 (3919) 74-66-96
+					a.contacts__call(href='#') Обратный звонок
+			.introduction
+				.introductionBlock
+					h1.introduction__header Монтаж и установка пластиковых окон
+					ul.introduction__list
+						li.introduction__items Работаем быстро
+						li.introduction__items Бесплатный выезд инженера
+						li.introduction__items Частые скидки
+					a.introduction__button Записаться на замер
+				img.introduction__image(src='img/header_img.png', alt='')
+			.mouseBlock
+				.mouse-icon
+					.wheel
+			.achievements
+				.achievements__block
+					.achievements__header
+						span.achievements__span 11 
+						| Лет на рынке
+					.achievements__text 11 лет успешной работы на рынке изготовления окон
+				.achievements__block
+					.achievements__header
+						span.achievements__span 60 
+						| Партнеров
+					.achievements__text Более 60 партнеров и поставщиков
+				.achievements__block
+					.achievements__header
+						span.achievements__span 35 
+						| Видов
+					.achievements__text Более 35 видов пластиковых окон
+				.achievements__block
+					.achievements__header
+						span.achievements__span 200000 
+						| Семей
+					.achievements__text Более 200 000 семей выбрали нас
+			.profile
+				.profile__left
+					img.image(src="../img/715.png")
+				.profile__right
+					.profile__about
+						.profile__header Пластиковые окна - это наш профиль
+						.profile__introduction Обращаясь в нашу компанию, вы гарантированно получаете высокое качество проектирования и монтажа пластиковых окон.  SANTA - это команда профессионалов с многолетним опытом работы.
+						ul.profile__link
+							li.profile__link_items Работаем без предоплаты
+							li.profile__link_items Бесплатный выезд инженера
+						.profile__buttons
+						.profile__button(href='#') Сделать заказ
+						.profile__button.profile__button_certificate(href='#') Наши сертификаты
+			.directions
+				.directions__header Основные направления услуг
+				.directions__wrap
+					mixin direction(img, header, text, buttonLink)
+						.direction
+							img.direction__icon(src=img)
+							.direction__header= header
+							.direction__line
+							.direction__text= text
+							.direction__button-wrap
+								a.direction__button(href=buttonLink) Заказать
+					+direction('img/services/1.svg','Монтаж', "Монтаж окон является основным и главным направлением компании SANTA. Наша компания выполняет монтаж окон уже более 6 лет.", "#")
+					+direction('img/services/2.svg','Проектирование', "Основная задача задача наших специалистов это поиск оптимальных решений по взаимодействию и интеграции в архитектуру окон вышеуказанных инженерных систем.", "#")
+					+direction('img/services/windows.png','Оборудование', "Кроме того, мы поставляем оборудование для установки окон в Москве и области.", "#")
+			.works Выполненные работы
+			.completedwork
+				- var text = [null,'ТРЦ Ocean Plaza', 'ТРЦ Central', 'Магизин запчастей Elektrotek', 'Магазин ХозТоваров', 'ТРЦ Галерея Новосибирск', 'ТРЦ London', 'ТЦ Семья', 'ТЦ Эльград']
+				-for(var i = 1 ; i< 9 ; i++)
+					.completedwork__block
+						img.completedwork__image(src=`img/works/${i}.jpg`)
+						.completedwork__inner
+							div.completedwork__icon
+							.completedwork__text= text[i]
+			.equipments
+				.equipments__header Поставляемое оборудование
+				.equipments__wrap
+					mixin equipment(img, header, text, buttonLink)
+						.equipment
+							img.equipment__icon(src=img)
+							.equipment__header= header
+							.equipment__text= text
+							a.equipment__button(href=buttonLink) Перейти в каталог
+					+equipment('img/equipment/logo_corf.png','KORF', "Российский производитель качественного оборудования с 13-ти летним стажем", "#")
+					+equipment('img/equipment/wot.png','WORLD OF TANKS', "Компания World of Tanks является лидером на рынке  производства пластиковых окон, ", "#")
+					+equipment('img/equipment/logo_venterra.png','VENTERRA', "«Venterra» — глобальный лидер в области монтажа и установки", "#")
+					+equipment('img/equipment/EMC.png','EMC', "Оборудование EMC производиться на заводах лучших мировых производителей с учётом сложных климатических условий нащей страны.", "#")
+			.discounts
+				.discount__header Всем клиентам скидки
+				.discount__introduction Всем клиентам, обратившимся в эту  компанию до июня 2017 года мы предоставляем уникальную возможность получить скидку до 40%.
+				.discount__button(href='#') сделать заявку
+			.partners
+			.partners__header Наши партнеры
+			.partners__images
+				img.partners__image(src="/img/partners/part-1.png")
+				img.partners__image(src="/img/partners/part-2.png")
+				img.partners__image(src="/img/partners/part-3.png")
+				img.partners__image(src="/img/partners/part-4.png")
+				img.partners__image(src="/img/partners/part-5.png")
+			.b-contacts
+				.b-contacts__header Контакты
+				.b-contacts__wrap
+					.b-contacts__left
+						.b-contacts__adress Адрес: Красноярский край, г. Железногорск, ул, Октябрьская, д. 4
+						.b-contacts__phone Телефон: 8 (913) 507-53-90
+						img.b-contacts__map(src="/img/map.png")
+					.b-contacts__right
+						.form
+							.form__title Оставить заявку
+							.form__text Оставьте заявку и мы свяжемся с вами
+							.form__label Введите ваше имя:
+								input.form__input(type="text" placeholder="Ваше имя...")
+							.form__label Ваш телефон:
+								input.form__input(type="text" placeholder="Ваш телефон...")
+							.form__label Услуга:
+								//input.form__input(type="text" placeholder="Тип услуги")
+								select.form__input
+									option Услуга1
+									option Услуга2
+									option Услуга3
+							button.form__button Отправить
+			.footer
+				a(href='/')
+					img.logo(src='img/logo.png', alt='')
+				ul.menu
+					li.menu__item
+						a.menu__link(href='#') Главная
+					li.menu__item
+						a.menu__link(href='#') Направления
+					li.menu__item
+						a.menu__link(href='#') Оборудование
+					li.menu__item
+						a.menu__link(href='#') Новости
+					li.menu__item
+						a.menu__link(href='#') Контакты
+				.contacts
+					.contacts__phone +7 (3919) 74-66-96
+					a.contacts__call(href='#') Обратный звонок
+
+
+		script(src='js/main.js')
+		script(src='js/libs.js')
