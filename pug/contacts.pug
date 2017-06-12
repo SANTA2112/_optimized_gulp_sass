@@ -1,0 +1,71 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		title Document
+		link(rel='stylesheet', href='css/test.min.css')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+		link(rel='shortcut icon', href='img/favicon/favicon.ico', type='image/x-icon')
+		link(rel='apple-touch-icon', href='img/favicon/apple-touch-icon.png')
+		link(rel='apple-touch-icon', sizes='72x72', href='img/favicon/apple-touch-icon-72x72.png')
+		link(rel='apple-touch-icon', sizes='114x114', href='img/favicon/apple-touch-icon-114x114.png')
+	body
+		.menubutton
+			.menubutton__inner
+		.wrapper
+			header
+				a(href='/')
+					img.logo(src='img/logo.png', alt='')
+				ul.menu
+					li.menu__item
+						a.menu__link(href='index.html') Главная
+					li.menu__item
+						a.menu__link(href='directions.html') Направления
+					li.menu__item
+						a.menu__link(href='equipments.html') Оборудование
+					li.menu__item
+						a.menu__link(href='news.html') Новости
+					li.menu__item
+						a.menu__link(href='contacts.html') Контакты
+				.contacts
+					.contacts__phone +7 (3919) 74-66-96
+					a.contacts__call(href='#') Обратный звонок
+			.b-contacts.b-contacts_c
+				.b-contacts__wrap
+					.b-contacts__left
+						.b-contacts__adress.b-contacts__adress_c Адрес: Красноярский край, г. Железногорск, ул, Октябрьская, д. 4
+						.b-contacts__phone.b-contacts__phone_c Телефон: 8 (913) 507-53-90
+						img.b-contacts__map(src="/img/map.png")
+					.b-contacts__right
+						.form
+							.form__title Оставить заявку
+							.form__text Оставьте заявку и мы свяжемся с вами
+							.form__label Введите ваше имя:
+								input.form__input(type="text" placeholder="Ваше имя...")
+							.form__label Ваш телефон:
+								input.form__input(type="text" placeholder="Ваш телефон...")
+							.form__label Услуга:
+								select.form__input
+									option Монтаж
+									option Проектирование
+									option Оборудование
+							button.form__button Отправить
+			footer
+				a(href='/')
+					img.logo_f(src='img/logo1.png', alt='')
+				ul.menu
+					li.menu__item.menu__item_f
+						a.menu__link.menu__link_f(href='index.html') Главная
+					li.menu__item.menu__item_f
+						a.menu__link.menu__link_f(href='directions.html') Направления
+					li.menu__item.menu__item_f
+						a.menu__link.menu__link_f(href='equipments.html') Оборудование
+					li.menu__item.menu__item_f
+						a.menu__link.menu__link_f(href='news.html') Новости
+					li.menu__item.menu__item_f
+						a.menu__link.menu__link_f(href='contacts.html') Контакты
+				.contacts.contacts_f
+					.contacts__phone.contacts__phone_f +7 (3919) 74-66-96
+					a.contacts__call.contacts__call_f(href='#') Обратный звонок

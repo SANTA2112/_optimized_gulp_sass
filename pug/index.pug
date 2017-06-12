@@ -3,10 +3,7 @@ html(lang='en')
 	head
 		meta(charset='UTF-8')
 		meta(name='viewport', content='width=device-width, initial-scale=1.0')
-		title Document
-		//
-			<link rel="stylesheet" href="css/header.min.css">
-			<link rel="stylesheet" href="css/main.min.css">
+		title ООО "Евростиль"
 		link(rel='stylesheet', href='css/test.min.css')
 		meta(http-equiv='X-UA-Compatible', content='IE=edge')
 		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
@@ -23,15 +20,15 @@ html(lang='en')
 					img.logo(src='img/logo.png', alt='')
 				ul.menu
 					li.menu__item
-						a.menu__link(href='#') Главная
+						a.menu__link(href='index.html') Главная
 					li.menu__item
-						a.menu__link(href='#') Направления
+						a.menu__link(href='directions.html') Направления
 					li.menu__item
-						a.menu__link(href='#') Оборудование
+						a.menu__link(href='equipments.html') Оборудование
 					li.menu__item
-						a.menu__link(href='#') Новости
+						a.menu__link(href='news.html') Новости
 					li.menu__item
-						a.menu__link(href='#') Контакты
+						a.menu__link(href='contacts.html') Контакты
 				.contacts
 					.contacts__phone +7 (3919) 74-66-96
 					a.contacts__call(href='#') Обратный звонок
@@ -145,29 +142,28 @@ html(lang='en')
 							.form__label Ваш телефон:
 								input.form__input(type="text" placeholder="Ваш телефон...")
 							.form__label Услуга:
-								//input.form__input(type="text" placeholder="Тип услуги")
 								select.form__input
-									option Услуга1
-									option Услуга2
-									option Услуга3
+									option Монтаж
+									option Проектирование
+									option Оборудование
 							button.form__button Отправить
-			.footer
+			footer
 				a(href='/')
-					img.logo(src='img/logo.png', alt='')
+					img.logo_f(src='img/logo1.png', alt='')
 				ul.menu
-					li.menu__item
-						a.menu__link(href='#') Главная
-					li.menu__item
-						a.menu__link(href='#') Направления
-					li.menu__item
-						a.menu__link(href='#') Оборудование
-					li.menu__item
-						a.menu__link(href='#') Новости
-					li.menu__item
-						a.menu__link(href='#') Контакты
-				.contacts
-					.contacts__phone +7 (3919) 74-66-96
-					a.contacts__call(href='#') Обратный звонок
+					li.menu__item.menu__item_f
+						a.menu__link.menu__link_f(href='index.html') Главная
+					li.menu__item.menu__item_f
+						a.menu__link.menu__link_f(href='directions.html') Направления
+					li.menu__item.menu__item_f
+						a.menu__link.menu__link_f(href='equipments.html') Оборудование
+					li.menu__item.menu__item_f
+						a.menu__link.menu__link_f(href='news.html') Новости
+					li.menu__item.menu__item_f
+						a.menu__link.menu__link_f(href='contacts.html') Контакты
+				.contacts.contacts_f
+					.contacts__phone.contacts__phone_f +7 (3919) 74-66-96
+					a.contacts__call.contacts__call_f(href='#') Обратный звонок
 
 
 		script(src='js/main.js')
