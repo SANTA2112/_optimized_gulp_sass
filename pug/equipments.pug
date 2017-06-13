@@ -22,17 +22,17 @@ html(lang='en')
 					li.menu__item
 						a.menu__link(href='index.html') Главная
 					li.menu__item
-						a.menu__link(href='directions.html') Направления
+						a.menu__link(href='installation.html') Монтаж
+					li.menu__item
+						a.menu__link(href='design.html') Проектирование
 					li.menu__item
 						a.menu__link(href='equipments.html') Оборудование
-					li.menu__item
-						a.menu__link(href='news.html') Новости
 					li.menu__item
 						a.menu__link(href='contacts.html') Контакты
 				.contacts
 					.contacts__phone +7 (3919) 74-66-96
 					a.contacts__call(href='#') Обратный звонок
-			.equipments
+			.equipments.equipments_c
 				.equipments__header Поставляемое оборудование
 				.equipments__wrap
 					mixin equipment(img, header, text, buttonLink)
@@ -40,17 +40,11 @@ html(lang='en')
 							img.equipment__icon(src=img)
 							.equipment__header= header
 							.equipment__text= text
-							a.equipment__button(href=buttonLink) Перейти в каталог
+							a.equipment__button(href=buttonLink) Заказать
 					+equipment('img/equipment/logo_corf.png','KORF', "Российский производитель качественного оборудования с 13-ти летним стажем", "#")
 					+equipment('img/equipment/wot.png','WORLD OF TANKS', "Компания World of Tanks является лидером на рынке  производства пластиковых окон, ", "#")
 					+equipment('img/equipment/logo_venterra.png','VENTERRA', "«Venterra» — глобальный лидер в области монтажа и установки", "#")
 					+equipment('img/equipment/EMC.png','EMC', "Оборудование EMC производиться на заводах лучших мировых производителей с учётом сложных климатических условий нащей страны.", "#")
-
-
-
-
-
-
 			footer
 				a(href='/')
 					img.logo_f(src='img/logo1.png', alt='')
@@ -58,11 +52,11 @@ html(lang='en')
 					li.menu__item.menu__item_f
 						a.menu__link.menu__link_f(href='index.html') Главная
 					li.menu__item.menu__item_f
-						a.menu__link.menu__link_f(href='directions.html') Направления
+						a.menu__link.menu__link_f(href='installation.html') Монтаж
+					li.menu__item.menu__item_f
+						a.menu__link.menu__link_f(href='design.html') Проектирование
 					li.menu__item.menu__item_f
 						a.menu__link.menu__link_f(href='equipments.html') Оборудование
-					li.menu__item.menu__item_f
-						a.menu__link.menu__link_f(href='news.html') Новости
 					li.menu__item.menu__item_f
 						a.menu__link.menu__link_f(href='contacts.html') Контакты
 				.contacts.contacts_f
