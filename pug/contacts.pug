@@ -3,17 +3,32 @@ html(lang='en')
 	head
 		meta(charset='UTF-8')
 		meta(name='viewport', content='width=device-width, initial-scale=1.0')
-		title Document
+		title Контакты
 		link(rel='stylesheet', href='css/test.min.css')
+		link(rel='stylesheet', href='libs/magnific-popup/magnific-popup.css')
 		meta(http-equiv='X-UA-Compatible', content='IE=edge')
 		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
 		link(rel='shortcut icon', href='img/favicon/favicon.ico', type='image/x-icon')
 		link(rel='apple-touch-icon', href='img/favicon/apple-touch-icon.png')
 		link(rel='apple-touch-icon', sizes='72x72', href='img/favicon/apple-touch-icon-72x72.png')
 		link(rel='apple-touch-icon', sizes='114x114', href='img/favicon/apple-touch-icon-114x114.png')
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
 	body
 		.menubutton
 			.menubutton__inner
+		.callback
+			form.callback__window
+				.callback__success
+					p Спасибо за заявку!
+				.callback__header Отправить заявку
+				.callback__text Оставьте заявку и мы свяжемся с вами в течение 20 минут.
+				.callback__label Введите ваше имя:
+				input.callback__input(type="text" placeholder="Ваше имя..." required)
+				.callback__label Введите ваш телефон:
+				input.callback__input(type="text" placeholder="Ваш телефон..." required)
+				button.callback__button Отправить
+		.top
+			i.fa.fa-angle-double-up
 		.wrapper
 			header
 				a(href='/')
@@ -31,7 +46,7 @@ html(lang='en')
 						a.menu__link(href='contacts.html') Контакты
 				.contacts
 					.contacts__phone +7 (3919) 74-66-96
-					a.contacts__call(href='#') Обратный звонок
+					a.contacts__call(href='.callback__window') Обратный звонок
 			.b-contacts.b-contacts_c
 				.b-contacts__wrap
 					.b-contacts__left
@@ -39,13 +54,15 @@ html(lang='en')
 						.b-contacts__phone.b-contacts__phone_c Телефон: 8 (913) 507-53-90
 						img.b-contacts__map(src="/img/map.png")
 					.b-contacts__right
-						.form
+						form.form
+							.form__success
+								p Спасибо за заявку!
 							.form__title Оставить заявку
 							.form__text Оставьте заявку и мы свяжемся с вами
 							.form__label Введите ваше имя:
-								input.form__input(type="text" placeholder="Ваше имя...")
+								input.form__input(type="text" placeholder="Ваше имя..." required)
 							.form__label Ваш телефон:
-								input.form__input(type="text" placeholder="Ваш телефон...")
+								input.form__input(type="text" placeholder="Ваш телефон..." required)
 							.form__label Услуга:
 								select.form__input
 									option Монтаж
@@ -68,4 +85,9 @@ html(lang='en')
 						a.menu__link.menu__link_f(href='contacts.html') Контакты
 				.contacts.contacts_f
 					.contacts__phone.contacts__phone_f +7 (3919) 74-66-96
-					a.contacts__call.contacts__call_f(href='#') Обратный звонок
+					a.contacts__call.contacts__call_f(href='.callback__window') Обратный звонок
+
+		script(src='js/main.js')
+		script(src='js/libs.js')
+		script(src='js/common.js')
+		script(src='libs/magnific-popup/jquery.magnific-popup.min.js')

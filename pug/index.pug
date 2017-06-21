@@ -5,15 +5,30 @@ html(lang='en')
 		meta(name='viewport', content='width=device-width, initial-scale=1.0')
 		title ООО "Евростиль"
 		link(rel='stylesheet', href='css/test.min.css')
+		link(rel='stylesheet', href='libs/magnific-popup/magnific-popup.css')
 		meta(http-equiv='X-UA-Compatible', content='IE=edge')
 		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
 		link(rel='shortcut icon', href='img/favicon/favicon.ico', type='image/x-icon')
 		link(rel='apple-touch-icon', href='img/favicon/apple-touch-icon.png')
 		link(rel='apple-touch-icon', sizes='72x72', href='img/favicon/apple-touch-icon-72x72.png')
 		link(rel='apple-touch-icon', sizes='114x114', href='img/favicon/apple-touch-icon-114x114.png')
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
 	body
 		.menubutton
 			.menubutton__inner
+		.callback
+			form.callback__window
+				.callback__success
+					p Спасибо за заявку!
+				.callback__header Отправить заявку
+				.callback__text Оставьте заявку и мы свяжемся с вами в течение 20 минут.
+				.callback__label Введите ваше имя:
+				input.callback__input(type="text" placeholder="Ваше имя..." required)
+				.callback__label Введите ваш телефон:
+				input.callback__input(type="text" placeholder="Ваш телефон..." required)
+				button.callback__button Отправить
+		.top
+			i.fa.fa-angle-double-up
 		.wrapper
 			header
 				a(href='/')
@@ -31,7 +46,7 @@ html(lang='en')
 						a.menu__link(href='contacts.html') Контакты
 				.contacts
 					.contacts__phone +7 (3919) 74-66-96
-					a.contacts__call(href='#') Обратный звонок
+					a.contacts__call(href='.callback__window') Обратный звонок
 			.introduction
 				.introductionBlock
 					h1.introduction__header Монтаж и установка пластиковых окон
@@ -39,7 +54,7 @@ html(lang='en')
 						li.introduction__items Работаем быстро
 						li.introduction__items Бесплатный выезд инженера
 						li.introduction__items Частые скидки
-					a.introduction__button Записаться на замер
+					a.introduction__button(href=".callback__window") Записаться на замер
 				img.introduction__image(src='img/header_img.png', alt='')
 			.mouseBlock
 				.mouse-icon
@@ -47,22 +62,22 @@ html(lang='en')
 			.achievements
 				.achievements__block
 					.achievements__header
-						span.achievements__span 11 
+						span.achievements__span(data-count="11") 11 
 						| Лет на рынке
 					.achievements__text 11 лет успешной работы на рынке изготовления окон
 				.achievements__block
 					.achievements__header
-						span.achievements__span 60 
+						span.achievements__span(data-count="60") 60 
 						| Партнеров
 					.achievements__text Более 60 партнеров и поставщиков
 				.achievements__block
 					.achievements__header
-						span.achievements__span 35 
+						span.achievements__span(data-count="35") 35 
 						| Видов
 					.achievements__text Более 35 видов пластиковых окон
 				.achievements__block
 					.achievements__header
-						span.achievements__span 200000 
+						span.achievements__span(data-count="200000") 200000 
 						| Семей
 					.achievements__text Более 200 000 семей выбрали нас
 			.profile
@@ -76,7 +91,7 @@ html(lang='en')
 							li.profile__link_items Работаем без предоплаты
 							li.profile__link_items Бесплатный выезд инженера
 						.profile__buttons
-						.profile__button(href='#') Сделать заказ
+						.profile__button(href='.callback__window') Сделать заказ
 						.profile__button.profile__button_certificate(href='#') Наши сертификаты
 			.directions
 				.directions__header Основные направления услуг
@@ -89,9 +104,9 @@ html(lang='en')
 							.direction__text= text
 							.direction__button-wrap
 								a.direction__button(href=buttonLink) Заказать
-					+direction('img/services/1.svg','Монтаж', "Монтаж окон является основным и главным направлением компании SANTA. Наша компания выполняет монтаж окон уже более 6 лет.", "#")
-					+direction('img/services/2.svg','Проектирование', "Основная задача задача наших специалистов это поиск оптимальных решений по взаимодействию и интеграции в архитектуру окон вышеуказанных инженерных систем.", "#")
-					+direction('img/services/windows.png','Оборудование', "Кроме того, мы поставляем оборудование для установки окон в Москве и области.", "#")
+					+direction('img/services/1.svg','Монтаж', "Монтаж окон является основным и главным направлением компании SANTA. Наша компания выполняет монтаж окон уже более 6 лет.", ".callback__window")
+					+direction('img/services/2.svg','Проектирование', "Основная задача задача наших специалистов это поиск оптимальных решений по взаимодействию и интеграции в архитектуру окон вышеуказанных инженерных систем.", ".callback__window")
+					+direction('img/services/windows.png','Оборудование', "Кроме того, мы поставляем оборудование для установки окон в Москве и области.", ".callback__window")
 			.works Выполненные работы
 			.completedwork
 				- var text = [null,'ТРЦ Ocean Plaza', 'ТРЦ Central', 'Магизин запчастей Elektrotek', 'Магазин ХозТоваров', 'ТРЦ Галерея Новосибирск', 'ТРЦ London', 'ТЦ Семья', 'ТЦ Эльград']
@@ -110,14 +125,14 @@ html(lang='en')
 							.equipment__header= header
 							.equipment__text= text
 							a.equipment__button(href=buttonLink) Перейти в каталог
-					+equipment('img/equipment/logo_corf.png','KORF', "Российский производитель качественного оборудования с 13-ти летним стажем", "#")
-					+equipment('img/equipment/wot.png','WORLD OF TANKS', "Компания World of Tanks является лидером на рынке  производства пластиковых окон, ", "#")
-					+equipment('img/equipment/logo_venterra.png','VENTERRA', "«Venterra» — глобальный лидер в области монтажа и установки", "#")
-					+equipment('img/equipment/EMC.png','EMC', "Оборудование EMC производиться на заводах лучших мировых производителей с учётом сложных климатических условий нащей страны.", "#")
+					+equipment('img/equipment/logo_corf.png','KORF', "Российский производитель качественного оборудования с 13-ти летним стажем", "equipments.html")
+					+equipment('img/equipment/wot.png','WORLD OF TANKS', "Компания World of Tanks является лидером на рынке  производства пластиковых окон, ", "equipments.html")
+					+equipment('img/equipment/logo_venterra.png','VENTERRA', "«Venterra» — глобальный лидер в области монтажа и установки", "equipments.html")
+					+equipment('img/equipment/EMC.png','EMC', "Оборудование EMC производиться на заводах лучших мировых производителей с учётом сложных климатических условий нащей страны.", "equipments.html")
 			.discounts
 				.discount__header Всем клиентам скидки
 				.discount__introduction Всем клиентам, обратившимся в эту  компанию до июня 2017 года мы предоставляем уникальную возможность получить скидку до 40%.
-				.discount__button(href='#') сделать заявку
+				.discount__button(href='.callback__window') Сделать заявку
 			.partners
 			.partners__header Наши партнеры
 			.partners__images
@@ -134,13 +149,15 @@ html(lang='en')
 						.b-contacts__phone Телефон: 8 (913) 507-53-90
 						img.b-contacts__map(src="/img/map.png")
 					.b-contacts__right
-						.form
+						form.form
+							.form__success
+								p Спасибо за заявку!
 							.form__title Оставить заявку
 							.form__text Оставьте заявку и мы свяжемся с вами
 							.form__label Введите ваше имя:
-								input.form__input(type="text" placeholder="Ваше имя...")
+								input.form__input(type="text" placeholder="Ваше имя..." required)
 							.form__label Ваш телефон:
-								input.form__input(type="text" placeholder="Ваш телефон...")
+								input.form__input(type="text" placeholder="Ваш телефон..." required)
 							.form__label Услуга:
 								select.form__input
 									option Монтаж
@@ -163,8 +180,10 @@ html(lang='en')
 						a.menu__link.menu__link_f(href='contacts.html') Контакты
 				.contacts.contacts_f
 					.contacts__phone.contacts__phone_f +7 (3919) 74-66-96
-					a.contacts__call.contacts__call_f(href='#') Обратный звонок
+					a.contacts__call.contacts__call_f(href='.callback__window') Обратный звонок
 
 
 		script(src='js/main.js')
 		script(src='js/libs.js')
+		script(src='js/common.js')
+		script(src='libs/magnific-popup/jquery.magnific-popup.min.js')

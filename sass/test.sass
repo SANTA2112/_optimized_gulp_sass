@@ -190,6 +190,7 @@ header
 	opacity: 0.7
 	display: inline-block
 	margin: 10px
+	cursor: pointer
 	.wheel
 		animation-name: drop
 		animation-duration: 1s
@@ -584,7 +585,7 @@ header
 		justify-content: center
 		margin-bottom: 92px
 	&__header
-		margin: 80px 0
+		margin: 50px 0
 		text-align: center
 		color: #fff
 		font-size: 34px
@@ -617,6 +618,26 @@ header
 	width: 360px
 	background-color: #303c48
 	padding: 40px 27px
+	position: relative
+	overflow: hidden
+	&__success
+		position: absolute
+		color: #fff
+		z-index: 1
+		left: 0
+		width: 100%
+		height: 100%
+		display: flex
+		top: -100%
+		opacity: 1
+		transition: all .5s ease
+		background-color: #303c48
+		p
+			display: flex
+			margin: auto
+		&.active
+			top: 0
+			opacity: 1
 	&__title
 		text-align: center
 		color: #ffffff
@@ -664,59 +685,6 @@ header
 		transition: .3s
 		&:hover
 			background-color: #a464f2
-
-
-
-@media screen and (max-width: 960px)
-	header
-		flex-direction: column
-	.logo
-		order: 1
-	.menu
-		order: 3
-	.contacts
-		order: 2
-	.mouseBlock
-		transform: translateY(-30px)
-@media screen and (max-width: 960px) and (min-width: 601px)
-	.introduction
-		&__header
-			line-height: 1
-		&__list
-			margin: 8px 0 8px 0
-		&__button
-			font-size: 12px
-	.equipments
-		&__wrap
-			flex-direction: column
-			justify-content: center
-			align-items: center
-	.partners
-		&__images
-			flex-direction: column
-		&__image
-			margin: 24px 0px
-	.directions
-		padding: 11px
-		&__header
-			margin-bottom: 14px
-		&__wrap
-			flex-wrap: wrap
-			justify-content: center
-			align-items: center
-	.direction
-		margin-bottom: 90px
-		max-width: 540px
-		&__button
-			margin-bottom: 20px
-	.b-contacts
-		&__wrap
-			flex-wrap: wrap
-		&__left
-			width: 100%
-			padding: 12px
-		&__map
-			width: 100%
 footer
 	display: flex
 	justify-content: space-between
@@ -772,6 +740,255 @@ footer
 		&_f
 		border-bottom: 1px dashed #7e91a4
 		color: #7e91a4
+
+.installation
+	overflow: hidden
+	background-color: #fff
+	padding-top: 20px
+	&__img
+		width: 750px
+	&__wrap
+		display: flex
+		justify-content: center
+		margin-bottom: 92px
+	&__header
+		margin: 30px 0
+		text-align: center
+		font-size: 34px
+	&__t
+		margin: 12px
+		width: 750px
+	&__button
+		margin: 0 auto
+		text-transform: uppercase
+		text-align: center
+		width: 246px
+		height: 48px
+		line-height: 48px
+		background-color: #2FA33E
+		color: #fff
+		border-radius: 3px
+		box-shadow: 0 4px 0 #298C35
+		transition: .25s
+		user-select: none
+		cursor: pointer
+		&:hover
+			background-color: #39C44A
+			color: #fff
+			text-decoration: none
+		&:active
+			transform: translateY(2px)
+			background-color: #298C35
+			box-shadow: 0 2px 0 #298C35
+			color: #fff
+			text-decoration: none
+		&:link, &:visited
+			color: #fff
+			text-decoration: none
+	&__left
+		padding-right: 30px
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+
+.callback
+	display: flex
+	display: none
+	width: 100%
+	&__success
+		position: absolute
+		color: #fff
+		z-index: 1
+		left: 0
+		width: 100%
+		height: 100%
+		display: flex
+		top: -100%
+		opacity: 1
+		transition: all .5s ease
+		background-color: #303c48
+		p
+			display: flex
+			margin: auto
+		&.active
+			top: 0
+			opacity: 1
+	&__window
+		background-color: #303c48
+		padding: 5px 26px
+		width: 330px
+		margin: 0 auto
+		position: relative
+		border-radius: 3px
+		overflow: hidden
+	&__header
+		text-align: center
+		color: #ffffff
+		font-size: 18px
+		text-transform: uppercase
+		padding-top: 15px
+	&__text
+		text-align: center
+		color: #9ea6af
+		font-size: 14px
+		font-weight: 400
+		padding: 15px
+	&__label
+		color: #6d7781
+		font-size: 14px
+	&__input
+		width: 100%
+		height: 46px
+		margin-top: 8px
+		margin-bottom: 20px
+		border-radius: 2px
+		background-color: #e0e4e8
+		outline: none
+		border: none
+		padding: 0 17px
+		&:focus
+			box-shadow: 0 4px 0 #4b5c6d
+	&__button
+		margin: 0 auto
+		margin-bottom: 10px
+		width: 200px
+		height: 39px
+		border-radius: 3px
+		background-color: #7d24ec
+		color: #ffffff
+		font-size: 13px
+		font-weight: 400
+		text-transform: uppercase
+		display: flex
+		justify-content: center
+		align-items: center
+		outline: none
+		border: none
+		cursor: pointer
+		transition: .3s
+		&:hover
+			background-color: #a464f2
+
+.top
+	position: fixed
+	bottom: 20px
+	right: 20px
+	width: 50px
+	height: 50px
+	border-radius: 100%
+	cursor: pointer
+	background-color: #fff
+	text-align: center
+	opacity: 0.4
+	color: #414e5b
+	+mt(.5s)
+	z-index: 5
+	.fa
+		font-size: 32px
+		margin-top: 7px
+
+	&:hover
+		opacity: 1
+		background-color: #ecb124
+
+
+@media screen and (max-width: 960px)
+	header
+		flex-direction: column
+	.logo
+		order: 1
+	.menu
+		order: 3
+	.contacts
+		order: 2
+	.mouseBlock
+		transform: translateY(-30px)
+@media screen and (max-width: 960px) and (min-width: 601px)
+	header
+		margin: 0
+	.mouseBlock
+		transform: translateY(28px)
+	.menubutton
+		display: block
+		z-index: 2
+	.menu
+		position: fixed
+		z-index: 1
+		top: 0
+		left: 0
+		display: block
+		transition: all .5s
+		transform: translateY(-100%)
+		width: 100%
+		flex-direction: column
+		&__link
+			&:hover
+				color: $accent
+				text-decoration: none
+		&__item
+			background-color: #003845
+			width: 100%
+			text-align: center
+	.introduction
+		text-align: center
+		&__image
+			display: none
+	.achievements
+		text-align: center
+		flex-direction: column
+		justify-content: center
+		align-items: center
+	.profile
+		&__header
+			text-align: center
+		&__introduction
+			text-align: center
+		&__link_items
+			text-align: center
+	.profile__button
+		margin-bottom: 15px
+	.directions
+		padding: 11px
+		&__header
+			margin-bottom: 14px
+		&__wrap
+			flex-wrap: wrap
+	.direction
+		margin-bottom: 90px
+		&__button
+			margin-bottom: 20px
+	.equipments
+		&__header
+			margin: 0 auto
+		&__wrap
+			flex-wrap: wrap
+	.equipment
+		&__icon
+			margin: 20px auto 35px
+	.partners
+		&__images
+			flex-direction: column
+		&__image
+			margin: 24px 0px
+	.b-contacts
+		&__wrap
+			flex-wrap: wrap
+		&__left
+			width: 100%
+			padding: 12px
+		&__map
+			width: 100%
+	.installation
+		&__wrap
+			flex-wrap: wrap
+		&__left
+			width: 100%
+			padding: 12px
+		&__img
+			width: 100%
+		&__t
+			width: 100%
+
 
 
 
@@ -849,4 +1066,14 @@ footer
 			width: 100%
 			padding: 12px
 		&__map
+			width: 100%
+	.installation
+		&__wrap
+			flex-wrap: wrap
+		&__left
+			width: 100%
+			padding: 12px
+		&__img
+			width: 100%
+		&__t
 			width: 100%
